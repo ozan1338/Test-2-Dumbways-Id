@@ -7,7 +7,7 @@ const drawImage = (n) => {
                     if( i === Math.floor(n/2)){
                         string += "*";
                     }else{
-                        string += "*";
+                        string += "#";
                     }
                 }else{
                     string += "*"
