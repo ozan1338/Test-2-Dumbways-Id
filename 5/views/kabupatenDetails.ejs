@@ -1,0 +1,16 @@
+<%- include("partials/header"); -%>
+<section class="container">
+    <div class="row d-flex justify-content-center">
+        <div style="width: fit-content;" class="col-1">
+            <img class="card-img-top text-center" src='<%= kabupaten[0].photo %>' alt="...">
+            <a href="/kabupaten/update/<%= kabupaten[0].id %>"><button class="btn btn-success">edit</button></a>
+            <a href="/kabupaten/delete/<%= kabupaten[0].id %>"><button class="btn-danger btn">delete</button></a>
+            <h1 class="text-center" ><%= kabupaten[0].nama %></h1>
+            <h4 class="text-center" ><%= kabupaten[0].diresmikan %></h4>
+            <h3 class="text-center"><%= kabupaten[0].pulau %></h3>
+            
+        </div>
+    </div>
+
+</section>
+<%- include("partials/footer"); -%>

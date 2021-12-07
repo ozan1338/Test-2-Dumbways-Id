@@ -1,0 +1,19 @@
+<%- include("partials/header"); -%>
+<h1>Add Kabupaten</h1>
+    <form class="" action="/kabupaten/add" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label >Nama Kabupaten</label>
+            <input class="form-control mb-3" type="text" name="nama">
+            <label>Choose a Picture:</label>
+            <input class="form-control mb-3" type="file" name="photo">
+            <label for="provinsi">Choose a Provinsi:</label>
+            <select name="provinsiName" id="provinsi">
+                <% provinsi.forEach((item)=>{ %>
+                    <option value="<%= item.nama %>"><%= item.nama %></option>
+                <% }) %>
+            </select>
+            
+        </div>
+        <button class="btn btn-primary" type="submit" name="button">submit</button>
+    </form>
+<%- include("partials/footer"); -%>

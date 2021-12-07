@@ -1,0 +1,23 @@
+<%- include("partials/header"); -%>
+
+        <section class="container">
+            <div class="row mt-5" >
+                <% provinsi.forEach((item)=>{ %>
+                    <div class="col-3 me-3">
+                        <div class="card me-3" style="width: 18rem">
+                            <img src="<%= item.photo %>" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title"><%= item.nama %></h5>
+                              <p class="card-text"><%= item.diresmikan %></p>
+                              <a href="/provinsi/<%= item.id %>" class="btn btn-primary">Details</a>
+                            </div>
+                        </div> 
+                    </div>
+                <% }) %>
+                
+                
+                
+            </div>
+        </section>
+
+<%- include("partials/footer"); -%>

@@ -1,0 +1,14 @@
+<%- include("partials/header"); -%>
+<h1>Update Provinsi</h1>
+    <form class="" action="/provinsi/update/<%= provinsi[0].id %>" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label>Nama Provinsi</label>
+            <input class="form-control" type="text" name="nama">
+            <label>Choose a Picture:</label>
+            <input class="form-control" type="file" name="photo">
+            <label>Pulau</label>
+            <input class="form-control" type="text" name="pulau" >
+        </div>
+        <button class="btn btn-primary" type="submit" name="button">submit</button>
+    </form>
+<%- include("partials/footer"); -%>

@@ -1,0 +1,32 @@
+<%- include("partials/header"); -%>
+<section class="container">
+    <div class="row d-flex justify-content-center">
+        <div style="width: fit-content;" class="col-1">
+            <img class="card-img-top text-center" src='<%= provinsi[0].photo %>' alt="...">
+            <a href="/provinsi/update/<%= provinsi[0].id %>"><button class="btn btn-success">edit</button></a>
+            <a href="/provinsi/delete/<%= provinsi[0].id %>"><button class="btn-danger btn">delete</button></a>
+            <h1 class="text-center" ><%= provinsi[0].nama %></h1>
+            <h4 class="text-center" ><%= provinsi[0].diresmikan %></h4>
+            <h3 class="text-center"><%= provinsi[0].pulau %></h3>
+            <h3>Kabupaten</h3>
+            <!-- <button class="btn btn-success">edit</button>
+            <button class="btn btn-danger">delete</button> -->
+            <div class="row">
+                <% kabupaten.forEach((item)=>{ %>
+                    <div class="col-3 me-3" style="width: 18rem;">
+                        <div class="card me-3">
+                            <img src="<%= item.photo %>" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title"><%= item.nama %></h5>
+                                  <p class="card-text"><%= item.diresmikan %></p>
+                                  <a href="/kabupaten/<%= item.id %>" class="btn btn-primary">Details</a>
+                                </div>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+
+</section>
+<%- include("partials/footer"); -%>
